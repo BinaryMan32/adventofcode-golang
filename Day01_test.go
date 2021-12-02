@@ -36,7 +36,7 @@ func TestDay01(t *testing.T) {
 			assert.Equal(7, Part1(example))
 		})
 		t.Run("result", func(t *testing.T) {
-			assert.Equal(0, Part1(input))
+			assert.Equal(1521, Part1(input))
 		})
 	})
 
@@ -45,7 +45,7 @@ func TestDay01(t *testing.T) {
 			assert.Equal(5, Part2(example))
 		})
 		t.Run("result", func(t *testing.T) {
-			assert.Equal(0, Part2(input))
+			assert.Equal(1543, Part2(input))
 		})
 	})
 }
