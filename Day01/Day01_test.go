@@ -1,35 +1,24 @@
 package Day01
 
 import (
-	"io/ioutil"
-	"strconv"
-	"strings"
+	_ "embed"
 	"testing"
+
+	"aoc2021/helpers"
 
 	"github.com/stretchr/testify/assert"
 )
 
-func readNumbers(fileName string) []int {
-	content, _ := ioutil.ReadFile("testdata/" + fileName)
-	lines := strings.Split(string(content), "\n")
-	nums := make([]int, 0, len(lines))
+//go:embed input
+var input_data string
 
-	for _, x := range lines {
-		// Empty line occurs at the end of the file when we use Split.
-		if len(x) == 0 {
-			continue
-		}
-		n, _ := strconv.Atoi(x)
-		nums = append(nums, n)
-	}
-
-	return nums
-}
+//go:embed example
+var example_data string
 
 func TestDay01(t *testing.T) {
 	assert := assert.New(t)
-	example := readNumbers("example")
-	input := readNumbers("input")
+	example := helpers.ReadNumbers(example_data)
+	input := helpers.ReadNumbers(input_data)
 
 	t.Run("part1", func(t *testing.T) {
 		t.Run("example", func(t *testing.T) {

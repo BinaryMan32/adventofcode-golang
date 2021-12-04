@@ -1,4 +1,4 @@
-module com.fivebytestudios.wildfreddy/Day01
+module aoc2021
 
 go 1.17
 
