@@ -16,15 +16,15 @@ var example_data string
 
 func TestDay02(t *testing.T) {
 	assert := assert.New(t)
-	example := strings.Split(example_data, "\n")
-	input := strings.Split(input_data, "\n")
+	example := strings.Split(strings.TrimSuffix(example_data, "\n"), "\n")
+	input := strings.Split(strings.TrimSuffix(input_data, "\n"), "\n")
 
 	t.Run("part1", func(t *testing.T) {
 		t.Run("example", func(t *testing.T) {
 			assert.Equal(198, Part1(example))
 		})
 		t.Run("result", func(t *testing.T) {
-			assert.Equal(0, Part1(input))
+			assert.Equal(741950, Part1(input))
 		})
 	})
 
@@ -33,7 +33,7 @@ func TestDay02(t *testing.T) {
 			assert.Equal(230, Part2(example))
 		})
 		t.Run("result", func(t *testing.T) {
-			assert.Equal(0, Part2(input))
+			assert.Equal(903810, Part2(input))
 		})
 	})
 }

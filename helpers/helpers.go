@@ -20,3 +20,13 @@ func ReadNumbers(data string) []int {
 
 	return nums
 }
+
+func FilterStrings(input []string, keep func(string) bool) []string {
+	filtered := make([]string, 0)
+	for _, item := range input {
+		if keep(item) {
+			filtered = append(filtered, item)
+		}
+	}
+	return filtered
+}
