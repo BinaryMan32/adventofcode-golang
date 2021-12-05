@@ -14,7 +14,7 @@ var input_data string
 //go:embed example
 var example_data string
 
-func TestDay02(t *testing.T) {
+func TestDay03(t *testing.T) {
 	assert := assert.New(t)
 	example := strings.Split(strings.TrimSuffix(example_data, "\n"), "\n")
 	input := strings.Split(strings.TrimSuffix(input_data, "\n"), "\n")
